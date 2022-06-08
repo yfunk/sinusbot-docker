@@ -3,7 +3,7 @@
 set -e
 
 SINUSBOT_VERSION="1.0.0-beta.16-ba60e37"
-YTDLP_VERSION="2022.04.08"
+YTDLP_VERSION="2022.05.18"
 
 case "$1" in
 
