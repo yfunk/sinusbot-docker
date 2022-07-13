@@ -3,7 +3,6 @@
 set -e
 
 SINUSBOT_VERSION="1.0.0-beta.16-ba60e37"
-YTDLP_VERSION="2022.05.18"
 
 case "$1" in
 
@@ -62,7 +61,7 @@ EOT
 	;;
 "yt-dlp")
 	echo "Downloading yt-dlp..."
-	curl -s -L -o /usr/local/bin/yt-dlp "https://github.com/yt-dlp/yt-dlp/releases/download/$YTDLP_VERSION/yt-dlp"
+	curl -s -L -o /usr/local/bin/yt-dlp "https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp"
 	chmod 755 /usr/local/bin/yt-dlp
 	echo 'YoutubeDLPath = "/usr/local/bin/yt-dlp"' >> config.ini.configured
 	echo "Successfully installed yt-dlp"
