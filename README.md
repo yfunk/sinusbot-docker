@@ -2,12 +2,15 @@
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/upstagebit/sinusbot.svg)](https://hub.docker.com/r/upstagebit/sinusbot)
 
+This is a fork of the [official docker image for SinusBot](https://hub.docker.com/r/sinusbot/docker), that uses `yt-dlp` instead of `youtube-dl` for faster YouTube downloads.
+
 ## Features
 
 - Easily updatable (see [instructions](#Updating) below)
 - Minimal dependencies to the Host system
 - Integrated Text-to-Speech engine
 - Compatible with macOS
+- Uses `yt-dlp` instead of `youtube-dl`
 
 ## Disclaimer
 
