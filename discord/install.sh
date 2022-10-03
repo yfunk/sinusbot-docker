@@ -52,12 +52,12 @@ Instances = 2
 EOT
 	echo "Successfully installed Text-to-Speech"
 	;;
-"youtube-dl")
-	echo "Downloading youtube-dl..."
-	curl -s -L -o /usr/local/bin/youtube-dl https://yt-dl.org/downloads/latest/youtube-dl
-	chmod 755 /usr/local/bin/youtube-dl
-	echo 'YoutubeDLPath = "/usr/local/bin/youtube-dl"' >> config.ini.configured
-	echo "Successfully installed youtube-dl"
+"yt-dlp")
+	echo "Downloading yt-dlp..."
+	curl -s -L -o /usr/local/bin/yt-dlp https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp
+	chmod 755 /usr/local/bin/yt-dlp
+	echo 'YoutubeDLPath = "/usr/local/bin/yt-dlp"' >> config.ini.configured
+	echo "Successfully installed yt-dlp"
 	;;
 "yt-dlp")
 	echo "Downloading yt-dlp..."
