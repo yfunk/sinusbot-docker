@@ -1,6 +1,6 @@
 # SinusBot Docker image
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/sinusbot/docker.svg)](https://hub.docker.com/r/sinusbot/docker)
+[![Docker Pulls](https://img.shields.io/docker/pulls/upstagebit/sinusbot.svg)](https://hub.docker.com/r/upstagebit/sinusbot)
 
 ## Features
 
@@ -36,7 +36,7 @@ docker run -d -p 8087:8087 \
            -v /opt/sinusbot/scripts:/opt/sinusbot/scripts \
            -v /opt/sinusbot/data:/opt/sinusbot/data \
            --name sinusbot \
-           sinusbot/docker
+           upstagebit/sinusbot
 ```
 
 #### unprivileged user
@@ -62,7 +62,7 @@ This can be done as described in the following:
              -e UID=$(id -u sinusbot) \
              -e GID=$(id -g sinusbot) \
              --name sinusbot \
-             sinusbot/docker
+             upstagebit/sinusbot
   ```
 
 ### docker-compose
@@ -83,7 +83,7 @@ To run via docker-compose as a non-root user, follow the docker instruction abov
 - `discord` is a discord-only version of `latest` and does not contain the TeamSpeak client with additional dependencies
 - every release is tagged with it's version (for example: `1.0.0-beta.6-f290553`) and a discord-only tag (for example: `1.0.0-beta.6-f290553-discord`)
 
-You view the [full list of tags](https://hub.docker.com/r/sinusbot/docker/tags) for specific versions.
+You view the [full list of tags](https://hub.docker.com/r/upstagebit/sinusbot/tags) for specific versions.
 
 ## Get Password
 
@@ -109,7 +109,7 @@ docker run -d -p 8087:8087 \
            -v /opt/sinusbot/scripts:/opt/sinusbot/scripts \
            -v /opt/sinusbot/data:/opt/sinusbot/data \
            -e OVERRIDE_PASSWORD=foobar \
-           --name sinusbot sinusbot/docker
+           --name sinusbot upstagebit/sinusbot
 ```
 
 ## License
@@ -132,7 +132,7 @@ To upgrade a container you need to remove and re-run it as shown below.
 2. Pull the latest image:
 
     ```bash
-    docker pull sinusbot/docker
+    docker pull upstagebit/sinusbot
     ```
 
 3. Create a new container with your volumes as described in the [usage](#usage) section above.
@@ -155,7 +155,7 @@ To use it you just have to use the `discord` tag instead of `latest` (default) t
 docker run -d -p 8087:8087 \
            -v /opt/sinusbot/scripts:/opt/sinusbot/scripts \
            -v /opt/sinusbot/data:/opt/sinusbot/data \
-           --name sinusbot sinusbot/docker:discord
+           --name sinusbot upstagebit/sinusbot:discord
 ```
 
 ## docker-compose with TeamSpeak 3 Server
@@ -181,7 +181,7 @@ services:
           - teamspeak.docker.local
 
   sinusbot:
-    image: sinusbot/docker
+    image: upstagebit/sinusbot
     restart: always
     ports:
       - 8087:8087

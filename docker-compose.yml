@@ -1,5 +1,5 @@
 sinusbot:
-  image: sinusbot/docker
+  image: upstagebit/sinusbot
   restart: always
   ports:
     - 8087:8087
