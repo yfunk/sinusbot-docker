@@ -1,3 +1,7 @@
+> **Note**
+> 
+> The [official docker image for SinusBot](https://hub.docker.com/r/sinusbot/docker) now also uses `yt-dlp`. This repository has been archived and will no longer be updated.
+
 # SinusBot Docker image
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/upstagebit/sinusbot.svg)](https://hub.docker.com/r/upstagebit/sinusbot)
