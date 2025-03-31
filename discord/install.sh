@@ -62,8 +62,8 @@ EOT
 	;;
 "teamspeak")
 	echo "Installing TeamSpeak Client..."
-	# Get latest TeamSpeak client download URL
-	DOWNLOAD_URL=$(curl -s https://www.teamspeak.com/versions/client.json | jq -r '.linux.x86_64.mirrors["teamspeak.com"]')
+	# Latest version supported by SinusBot is 3.5.6
+	DOWNLOAD_URL="https://files.teamspeak-services.com/releases/client/3.5.6/TeamSpeak3-Client-linux_amd64-3.5.6.run"
 
 	# Download TeamSpeak client
 	echo "Downloading TeamSpeak Client..."
