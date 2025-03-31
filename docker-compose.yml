@@ -1,8 +1,18 @@
-sinusbot:
-  image: upstagebit/sinusbot
-  restart: always
-  ports:
-    - 8087:8087
-  volumes:
-    - ./scripts:/opt/sinusbot/scripts
-    - ./data:/opt/sinusbot/data
+version: "3.8"
+
+services:
+  sinusbot:
+    image: upstagebit/sinusbot
+    restart: always
+    ports:
+      - 8087:8087
+    environment:
+      UID: # insert output of `id -u sinusbot`
+      GID: # insert output of `id -g sinusbot`
+    volumes:
+      - scripts:/opt/sinusbot/scripts
+      - data:/opt/sinusbot/data
+
+volumes:
+  scripts: {}
+  data: {}
