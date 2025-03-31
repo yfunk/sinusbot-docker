@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM debian:bookworm-slim
 
 LABEL description="SinusBot - Discord only image"
 LABEL version="1.0.2"
