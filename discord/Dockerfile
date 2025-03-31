@@ -1,7 +1,7 @@
 FROM debian:bookworm-slim
 
 LABEL description="SinusBot - Discord only image"
-LABEL version="1.0.2"
+LABEL version="1.0.2-0fe0e07"
 
 # Install dependencies and clean up afterwards
 RUN apt-get update && \

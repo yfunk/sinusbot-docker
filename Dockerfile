@@ -1,7 +1,7 @@
-FROM upstagebit/sinusbot:1.0.2-discord
+FROM upstagebit/sinusbot:1.0.2-0fe0e07-discord
 
 LABEL description="SinusBot - TeamSpeak 3 and Discord music bot."
-LABEL version="1.0.2"
+LABEL version="1.0.2-0fe0e07"
 
 # Install dependencies and clean up afterwards
 RUN apt-get update && \
