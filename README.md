@@ -2,7 +2,7 @@
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/upstagebit/sinusbot.svg)](https://hub.docker.com/r/upstagebit/sinusbot)
 
-This is a fork of the [official docker image for SinusBot](https://hub.docker.com/r/sinusbot/docker), that is based on an up-to-date Debian image.
+This is an up-to-date fork of the [official docker image for SinusBot](https://hub.docker.com/r/sinusbot/docker), based on Debian 12.
 
 ## Features
 
@@ -167,7 +167,7 @@ In the SinusBot you have to use the network alias `teamspeak.docker.local` as ho
 
 ```yaml
 # docker-compose.yml
-version: '2'
+version: '3.8'
 services:
   teamspeak:
     image: teamspeak
@@ -189,10 +189,15 @@ services:
     ports:
       - 8087:8087
     volumes:
-      - /opt/sinusbot/scripts:/opt/sinusbot/scripts
-      - /opt/sinusbot/data:/opt/sinusbot/data
+      - scripts:/opt/sinusbot/scripts
+      - data:/opt/sinusbot/data
     networks:
      - mynetwork
+
+volumes:
+  scripts: {}
+  data: {}
+
 networks:
     mynetwork:
         driver: bridge
